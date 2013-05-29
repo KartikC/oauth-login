@@ -60,7 +60,7 @@ def login
   private
   
   def get_consumer
-    OAuth::Consumer.new('dMHOcg8xvk0J0TIUlAdRZA', 'J9Fal9yvJAuocOWzgxpq3kkSXcfwegL1iMolEijcD8', {:site => 'https://api.twitter.com/'})
+    OAuth::Consumer.new('CONSUMER KEY', 'CONSUMER SECRET', {:site => 'https://api.twitter.com/'})
   end
 
 end
