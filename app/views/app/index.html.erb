@@ -1,0 +1,9 @@
+<h1>go ahead and tweet</h1>
+
+<%= form_tag 'do' do %>
+    <%=label_tag 'tweet:' %>
+    <%=text_field_tag 'text'%>
+    <%= submit_tag 'Post' %>
+<% end %><br>
+
+<%= link_to 'Back', sign_up_path %>
