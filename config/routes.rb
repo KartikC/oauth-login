@@ -1,12 +1,12 @@
 Login::Application.routes.draw do
-  get "app/index"
-
+get "app/index"
 get "log_out" => "sessions#destroy", :as => "log_out"
 get "log_in" => "sessions#new", :as => "log_in"
 get "sign_up" => "users#new", :as => "sign_up"
-get "twitter" => "users#login", :as => "twitter"
+get "service" => "oauth_one#requestTokens", :as => "service"
 post "/app/do" => "app#do", :as => "/app/do"
-get "/default/oauth" => "users#oauth"
+get "/default/oauth" => "oauth_one#receiveTokens"
+
 root :to => "users#new"
 resources :users
 resources :sessions

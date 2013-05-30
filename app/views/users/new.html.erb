@@ -24,6 +24,8 @@
     <%= f.password_field :password_confirmation %>
   </p>
   <p class="button"><%= f.submit %></p>
-  <%= link_to 'Add Twitter', twitter_path %>
+  <%= link_to 'Add Twitter', service_path('twitter') %>
+  <%= link_to 'Add Tumblr', service_path('tumblr') %>
+  <%= link_to 'Add Dropbox', service_path('dropbox') %>
   <%= link_to 'Go Tweet!', app_index_path %>
 <% end %>

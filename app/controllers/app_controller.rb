@@ -1,5 +1,17 @@
 class AppController < ApplicationController
   def index
+    
+    @user = User.find(session[:user_id])
+    if !@user.token
+      @user.token = params[:format].split(',')[0]
+      @user.secret = params[:format].split(',')[1]
+    
+      if @user.save
+        notice = "Twitter Logged In"
+      else
+        render "users#new"
+      end
+    end
   end
 
   def do
